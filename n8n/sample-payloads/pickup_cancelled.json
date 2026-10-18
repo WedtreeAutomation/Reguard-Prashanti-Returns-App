@@ -1,0 +1,53 @@
+{
+  "event": "pickup_cancelled",
+  "recipient": "priya.raghavan@example.com",
+  "brand": {
+    "name": "Prashanti Sarees",
+    "logoUrl": "https://prashantireturns.web.app/reguard-logo.png",
+    "primaryColor": "#560835",
+    "supportEmail": "support@prashantisarees.in",
+    "supportPhone": "+91 99625 05459",
+    "website": "https://www.prashantisarees.com",
+    "portalUrl": "https://prashantireturns.web.app",
+    "trackUrl": "https://prashantireturns.web.app/ReturnStatusPage?order=P905422",
+    "returnPolicyUrl": "https://www.prashantisarees.com/pages/cancellation-and-refund"
+  },
+  "customer": {
+    "name": "Priya Raghavan",
+    "email": "priya.raghavan@example.com",
+    "phone": "+91 98450 12345"
+  },
+  "order": {
+    "name": "P905422",
+    "id": 5876543210987
+  },
+  "request": {
+    "returnId": "P905422",
+    "RAN": "R1000123-905422",
+    "type": "return",
+    "submittedAt": "2026-10-09T08:00:00Z",
+    "submittedAtDisplay": "9 Oct 2026, 1:30 PM IST"
+  },
+  "items": [
+    {
+      "lineItemId": 14567890123,
+      "title": "Kanchipuram Pure Silk Saree – Maroon with Gold Zari Border",
+      "variant": "Maroon / Free Size",
+      "sku": "PS-KAN-MR-0412",
+      "quantity": 1,
+      "unitPrice": 18499,
+      "lineTotal": 18499,
+      "image": "https://cdn.shopify.com/s/files/1/0601/2345/6789/products/kanchipuram-maroon.jpg",
+      "action": "return",
+      "reason": "Colour looks different from the website photos"
+    }
+  ],
+  "currency": "INR",
+  "sentAt": "2026-10-09T08:00:05Z",
+  "cancellation": {
+    "awb": "81234567890",
+    "reason": "The courier could not reach you on the pickup date.",
+    "notes": "Three call attempts were made between 11 AM and 4 PM.",
+    "rescheduleAllowed": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "event": "agent_otp",
+  "recipient": "karthik.s@prashantisarees.in",
+  "brand": {
+    "name": "Prashanti Sarees",
+    "logoUrl": "https://prashantireturns.web.app/reguard-logo.png",
+    "primaryColor": "#560835",
+    "supportEmail": "support@prashantisarees.in",
+    "supportPhone": "+91 99625 05459",
+    "website": "https://www.prashantisarees.com",
+    "portalUrl": "https://prashantireturns.web.app",
+    "trackUrl": "https://prashantireturns.web.app/ReturnStatusPage?order=P905422",
+    "returnPolicyUrl": "https://www.prashantisarees.com/pages/cancellation-and-refund"
+  },
+  "agent": {
+    "name": "Karthik Subramanian",
+    "email": "karthik.s@prashantisarees.in"
+  },
+  "otp": "482913",
+  "expiryMinutes": 10,
+  "sentAt": "2026-10-09T08:00:05Z"
+}
