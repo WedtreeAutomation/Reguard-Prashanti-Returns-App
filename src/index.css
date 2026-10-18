@@ -1,0 +1,203 @@
+@import "tailwindcss";
+
+/*
+ * Brand palette — Prashanti / Re-Guard #560835.
+ * Every accent palette used in the app (indigo, violet, purple, fuchsia, pink,
+ * blue) is mapped onto one scale built around #560835 (shade 600), so buttons,
+ * links, focus rings, badges and gradients all use the brand colour.
+ * Semantic palettes (green/emerald = success, amber/orange/yellow = warning,
+ * red/rose = error, cyan/sky/teal = informational, slate/gray = neutral) are
+ * deliberately left untouched so statuses stay recognisable.
+ */
+@theme {
+  --color-brand: #560835;
+  --color-brand-50: #fbf2f7;
+  --color-brand-100: #f5e1ec;
+  --color-brand-200: #ebc2d8;
+  --color-brand-300: #d993b7;
+  --color-brand-400: #b85a8a;
+  --color-brand-500: #8a2a5e;
+  --color-brand-600: #560835;
+  --color-brand-700: #48062c;
+  --color-brand-800: #3b0524;
+  --color-brand-900: #2e041c;
+  --color-brand-950: #1f0213;
+  --color-indigo-50: #fbf2f7;
+  --color-indigo-100: #f5e1ec;
+  --color-indigo-200: #ebc2d8;
+  --color-indigo-300: #d993b7;
+  --color-indigo-400: #b85a8a;
+  --color-indigo-500: #8a2a5e;
+  --color-indigo-600: #560835;
+  --color-indigo-700: #48062c;
+  --color-indigo-800: #3b0524;
+  --color-indigo-900: #2e041c;
+  --color-indigo-950: #1f0213;
+  --color-violet-50: #fbf2f7;
+  --color-violet-100: #f5e1ec;
+  --color-violet-200: #ebc2d8;
+  --color-violet-300: #d993b7;
+  --color-violet-400: #b85a8a;
+  --color-violet-500: #8a2a5e;
+  --color-violet-600: #560835;
+  --color-violet-700: #48062c;
+  --color-violet-800: #3b0524;
+  --color-violet-900: #2e041c;
+  --color-violet-950: #1f0213;
+  --color-purple-50: #fbf2f7;
+  --color-purple-100: #f5e1ec;
+  --color-purple-200: #ebc2d8;
+  --color-purple-300: #d993b7;
+  --color-purple-400: #b85a8a;
+  --color-purple-500: #8a2a5e;
+  --color-purple-600: #560835;
+  --color-purple-700: #48062c;
+  --color-purple-800: #3b0524;
+  --color-purple-900: #2e041c;
+  --color-purple-950: #1f0213;
+  --color-fuchsia-50: #fbf2f7;
+  --color-fuchsia-100: #f5e1ec;
+  --color-fuchsia-200: #ebc2d8;
+  --color-fuchsia-300: #d993b7;
+  --color-fuchsia-400: #b85a8a;
+  --color-fuchsia-500: #8a2a5e;
+  --color-fuchsia-600: #560835;
+  --color-fuchsia-700: #48062c;
+  --color-fuchsia-800: #3b0524;
+  --color-fuchsia-900: #2e041c;
+  --color-fuchsia-950: #1f0213;
+  --color-pink-50: #fbf2f7;
+  --color-pink-100: #f5e1ec;
+  --color-pink-200: #ebc2d8;
+  --color-pink-300: #d993b7;
+  --color-pink-400: #b85a8a;
+  --color-pink-500: #8a2a5e;
+  --color-pink-600: #560835;
+  --color-pink-700: #48062c;
+  --color-pink-800: #3b0524;
+  --color-pink-900: #2e041c;
+  --color-pink-950: #1f0213;
+  --color-blue-50: #fbf2f7;
+  --color-blue-100: #f5e1ec;
+  --color-blue-200: #ebc2d8;
+  --color-blue-300: #d993b7;
+  --color-blue-400: #b85a8a;
+  --color-blue-500: #8a2a5e;
+  --color-blue-600: #560835;
+  --color-blue-700: #48062c;
+  --color-blue-800: #3b0524;
+  --color-blue-900: #2e041c;
+  --color-blue-950: #1f0213;
+}
+
+:root {
+  --brand: #560835;
+  --brand-rgb: 86, 8, 53;
+  color-scheme: light;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Prevent sideways page scroll on small screens. Use `clip`, NOT `hidden`: `overflow-x: hidden`
+   turns html/body into scroll containers, which silently breaks `position: sticky` descendants
+   (customer/status page headers, the mobile sticky "Continue" bar). */
+html, body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8f7f8;
+  color: #1f1720;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(var(--brand-rgb), 0.18);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(var(--brand-rgb), 0.55);
+  outline-offset: 2px;
+}
+
+/* Inputs use >=16px on phones so iOS Safari doesn't zoom on focus */
+@media (max-width: 640px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { 
+    transform: rotate(0deg); 
+  }
+  25% { 
+    transform: rotate(-10deg); 
+  }
+  75% { 
+    transform: rotate(10deg); 
+  }
+}
+
+.animate-gradient-x {
+  background-size: 200% 200%;
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+/* Slide in animation */
+@keyframes slide-in-from-top {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation-fill-mode: both;
+}
+
+.slide-in-from-top-2 {
+  animation: slide-in-from-top 0.3s ease-out;
+}
+
+/* Pulse glow effect */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(86, 8, 53, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(86, 8, 53, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
